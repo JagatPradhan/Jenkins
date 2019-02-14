@@ -18,10 +18,7 @@ archive 'target/*.jar'
 }
 stage('sonar test'){
 steps{
-sh 'mvn clean verify sonar:sonar
--Dsonar.projectName=PRADHAN
--Dsonar.projectKey=PRADHAN
--Dsonar.projectVersion=$BUILD_NUMBER'
+sh 'mvn clean verify sonar:sonar -Dsonar.projectName=PRADHAN -Dsonar.projectKey=PRADHAN -Dsonar.projectVersion=$BUILD_NUMBER'
 }
 }
 
