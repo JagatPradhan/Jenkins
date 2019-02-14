@@ -2,7 +2,7 @@ pipeline{
 node any
 stages{
 stage('git checkout'){
-scm checkout
+checkout scm
 }
 stage('sonar analysis'){
 sh 'mvn clean verify sonar:sonar
