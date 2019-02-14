@@ -1,10 +1,8 @@
 pipeline{
-agent any
+node any
 stages{
-stage('git checkout'){
-steps{
-scm checkout
-}
+stage('build'){
+checkout scm
 steps{
 sh 'mvn clean package'
 }
